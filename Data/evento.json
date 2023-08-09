@@ -1,0 +1,57 @@
+[
+    {
+        "id": 1 ,
+        "nombre": "Miguel mateo en salta",
+        "artista": "miguel mateos",
+        "genero": "rock nacional",
+        "id_ubicacion": 1001,
+        "hora_inicio": "20:00",
+        "hora_fin": "21:00",
+        "descripcion" : " idolo regresa a salta la linda",
+        "imagen": "foto en asssets"
+    },
+    {
+        "id": 2 ,
+        "nombre": "Jazz Club",
+        "artista": "Paris jazz club",
+        "genero": "jazz",
+        "id_ubicacion": 1002,
+        "hora_inicio": "20:30",
+        "hora_fin": "21:30",
+        "descripcion" : " bla bla bla",
+        "imagen": "foto en assets"
+    },
+    {
+        "id": 3 ,
+        "nombre": "El cuarteto de nos",
+        "artista": "El cuarteto de nos",
+        "genero": "cuarteto",
+        "id_ubicacion": 1003,
+        "hora_inicio": "22:00",
+        "hora_fin": "23:00",
+        "descripcion" : " bla bla bla",
+        "imagen": "foto"
+    },
+    {
+        "id": 4 ,
+        "nombre": "homer el mero mero",
+        "artista": "homer el mero mero",
+        "genero": "rap",
+        "id_ubicacion": 1004,
+        "hora_inicio": "20:00",
+        "hora_fin": "21:00",
+        "descripcion" : " bla bla bla",
+        "imagen": "foto"
+    },
+    {
+        "id": 5 ,
+        "nombre": " salta fito",
+        "artista": "Fito Paez",
+        "genero": "Romantico",
+        "id_ubicacion": 1005,
+        "hora_inicio": "20:00",
+        "hora_fin": "21:00",
+        "descripcion" : " bla bla bla",
+        "imagen": "foto"
+    }
+]

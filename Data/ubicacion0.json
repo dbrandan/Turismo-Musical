@@ -1,0 +1,33 @@
+[
+    {
+        "id": 1001 ,
+        "nombre": "teatro provincial  ",
+        "direccion": " buenos airesprimera cuadra  ",
+        "coordenadas": [1, 2.5, 3, 3.5]
+       
+    },
+    {
+        "id": 1002 ,
+        "nombre": "casa de la cultura ",
+        "direccion": "caseos al 400  ",
+        "coordenadas": [1, 2.5, 3, 3.5]
+    },
+    {
+        "id": 1003 ,
+        "nombre": " micro delmi ",
+        "direccion": " ibazeta y oggigins ",
+        "coordenadas": [1, 2.5, 3, 3.5]
+    },
+    {
+        "id": 1004 ,
+        "nombre": " la usina cultural ",
+        "direccion": " juramento 100 ",
+        "coordenadas": [1, 2.5, 3, 3.5]
+    },
+    {
+        "id": 1005 ,
+        "nombre": " estadio Delmi ",
+        "direccion": "  ibazeta y necochea",
+        "coordenadas": [1, 2.5, 3, 3.5]
+    }
+]
