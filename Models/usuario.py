@@ -1,6 +1,4 @@
 import json
-
-
 class Usuario:
     def __init__(self,id: str, nombre: str, apellido: str, historial_de_eventos: list[int], clave: str):
         self.id = id
@@ -17,6 +15,7 @@ class Usuario:
                 "clave" : self.clave
         
         } 
+    
         
     @classmethod
     def from_json(cls, json_data) :
@@ -28,7 +27,7 @@ class Usuario:
         historial_de_eventos = data ["historial_de_eventos"]
         clave= data["clave"]
         
-        return cls(id, nombre, apellido, historial_de_eventos)
+        return cls(id, nombre, apellido, historial_de_eventos,clave)
 
     
 

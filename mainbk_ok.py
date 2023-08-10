@@ -1,14 +1,10 @@
-import json
 import tkinter as tk
 import customtkinter as ctK
 from tkinter import messagebox
-from models.usuario import Usuario
 from PIL import Image
-#from data import Usuario
 import os
-#from Data import usuario.json  
+
 ctK.set_appearance_mode("dark")
-#usuario = Usuario()
 
 
 class Login (ctK.CTk):
@@ -67,6 +63,7 @@ class Login (ctK.CTk):
     # inicia registro de usuario
     def registro_event(self):
         self.main_frame.grid_forget()  # remove main frame
+        print (" deberia empezar el registro")
         self.login_frame = ctK.CTkFrame(self, corner_radius=0)
         self.login_frame.grid(row=0, column=0, sticky="ns")
         
@@ -89,29 +86,10 @@ class Login (ctK.CTk):
         #self.login_button = ctK.CTkButton(self.login_frame, text="re Login", command=self.login_password, width=200)
         #self.login_button.grid(row=6, column=0, padx=30, pady=(15, 15))
         
-        self.login_button = ctK.CTkButton(self.login_frame, text="Bienvenido", command=self.register_user, width=200)
+        self.login_button = ctK.CTkButton(self.login_frame, text="Bienvenido", command=self.login_event, width=200)
         self.login_button.grid(row=5, column=0, padx=30, pady=(15, 15))
         
-
-    def register_user(self):
-        nombre = self.firstname_entry 
-        apellido = self.lastname_entry 
-        clave = self.password_entry 
-
-        with open('Usuario.json','w') as f:
-            json.dump([Usuario.to_json(self)],f)
-            usuario = Usuario
-            usuario._id = 507
-                     
-            usuario.nombre = nombre
-            usuario.apellido = apellido
-            usuario.clave = clave
-        print("hasta aca llegamos bien")   
-            
-           
-
-        cerrar= Login.back_event()
-        cerrar.back_event()
+    
      
      # cierra la ventana y abre otra
     def back_event(self):

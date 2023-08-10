@@ -3,21 +3,21 @@
         "id": 2001 ,
         "nombre": "abel",
         "apellido": "arancibia",
-        "historial_de_eventos": "1,5"
+        "historial_de_eventos": "1,5",
         "clave": "asdf"
     },
     {
         "id": 2002 ,
         "nombre": "braian",
         "apellido": "bravo",
-        "historial_de_eventos": "1,2,3,4,5"
+        "historial_de_eventos": "1,2,3,4,5",
         "clave": "asdf"
     },
     {
         "id": 2003 ,
         "nombre": "carlos",
         "apellido": "carranza",
-        "historial_de_eventos": "3"
+        "historial_de_eventos": "3",
         "clave": "asdf"
        
     },
@@ -25,20 +25,20 @@
         "id": 2004 ,
         "nombre": "debora",
         "apellido": "dorado",
-        "historial_de_eventos": "2"
+        "historial_de_eventos": "2",
         "clave": "asdf"
     },
     {
         "id": 2005 ,
         "nombre": "eduardo",
         "apellido": "Estanislao",
-        "historial_de_eventos": "1,4"
+        "historial_de_eventos": "1,4",
         "clave": "asdf"
     },
     {   "id": 2006 ,
         "nombre": "fernando",
         "apellido": "fernandez",
-        "historial_de_eventos": "2"
+        "historial_de_eventos": "2",
         "clave": "asdf"
     }
 ]
