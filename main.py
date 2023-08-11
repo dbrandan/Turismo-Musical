@@ -1,8 +1,10 @@
+from dataclasses import dataclass
 import json
 import tkinter as tk
 import customtkinter as ctK
 from tkinter import messagebox
 from models.usuario import Usuario
+from models.evento import Evento
 from PIL import Image
 #from data import Usuario
 import os
@@ -51,14 +53,45 @@ class Login (ctK.CTk):
         # desde aca inicia el registro de usuario
         self.login_button = ctK.CTkButton(self.login_frame, text="Registrate", command=self.registro_event, width=200)
         self.login_button.grid(row=4, column=0, padx=30, pady=(15, 15))
-
+        # PANTALLA III
         # create main frame 2 pantalla
         self.main_frame = ctK.CTkFrame(self, corner_radius=0)
         self.main_frame.grid_columnconfigure(0, weight=1)
+        #SALIO SOLO
+        self.main_frame.grid()
+        #current_path = os.path.dirname(os.path.realpath(__file__))
+        #self.bg_image = ctK.CTkImage(Image.open(current_path + "/images/bg_gradient.jpg"), size=(self.width, self.height))
+        #self.bg_image_label = ctK.CTkLabel(self, image=self.bg_image)
+        #self.bg_image_label.grid(row=0, column=0)
+        
         self.main_label = ctK.CTkLabel(self.main_frame, text="Bienvenido al Mundo\nde la Maxima Musica",font=ctK.CTkFont(size=20, weight="bold"))
-        self.main_label.grid(row=0, column=0, padx=30, pady=(30, 15))
-        self.back_button = ctK.CTkButton(self.main_frame, text="Back", command=self.back_event, width=200)
-        self.back_button.grid(row=1, column=0, padx=30, pady=(15, 15))
+        self.main_label.grid(row=4, column=0, padx=30, pady=(30, 15))
+        # BOTONES AGREGADOS
+        self.back_button = ctK.CTkButton(self.main_frame, text="INDICE DE EVENTOS", command=self.indice_eventos, width=200)
+        self.back_button.grid(row=2, column=2, padx=30, pady=(15, 15))
+              
+        self.back_button = ctK.CTkButton(self.main_frame, text="BUSQUEDA DE EVENTOS", command=self.busqueda_eventos, width=200)
+        self.back_button.grid(row=4, column=2, padx=30, pady=(15, 15))
+        
+        self.back_button = ctK.CTkButton(self.main_frame, text="HISTORIAL DE EVENTOS", command=self.historial_evento, width=200)
+        self.back_button.grid(row=6, column=2, padx=30, pady=(15, 15))
+        
+
+        #FIN BOTONES AGREGADOS
+        #self.back_button = ctK.CTkButton(self.main_frame, text="Back the future", command=self.back_event, width=200)
+        #self.back_button.grid(row=8, column=0, padx=30, pady=(15, 15))
+    def indice_eventos():
+        print("llegue hasta aca")
+        listado = json.dumps(Usuario.a_json)
+        print(listado)
+       
+    def busqueda_eventos():
+        pass 
+    def historial_evento():
+        pass            
+
+     
+     #PANTALLA II
      # solicita datos de acceso   
     def login_event(self):
         print("Login pressed - username:", self.username_entry.get(), "password:", self.password_entry.get())
@@ -91,21 +124,22 @@ class Login (ctK.CTk):
         
         self.login_button = ctK.CTkButton(self.login_frame, text="Bienvenido", command=self.register_user, width=200)
         self.login_button.grid(row=5, column=0, padx=30, pady=(15, 15))
-        
-
+    
     def register_user(self):
-        nombre = self.firstname_entry 
-        apellido = self.lastname_entry 
-        clave = self.password_entry 
+        self.login_frame.grid_forget()  # remove login frame
+        self.main_frame.grid(row=0, column=0, sticky="nsew", padx=100)  # show main frame
+        #nombre = self.firstname_entry 
+        #apellido = self.lastname_entry 
+        #clave = self.password_entry 
 
-        with open('Usuario.json','w') as f:
-            json.dump([Usuario.to_json(self)],f)
-            usuario = Usuario
-            usuario._id = 507
-                     
-            usuario.nombre = nombre
-            usuario.apellido = apellido
-            usuario.clave = clave
+        #with open('Usuario.json','w') as f:
+         #   json.dump([Usuario.to_json(self)],f)
+        #    usuario = Usuario
+        #    usuario._id = 507
+         #            
+          #  usuario.nombre = nombre
+        #    usuario.apellido = apellido
+         #   usuario.clave = clave
         print("hasta aca llegamos bien")   
             
            
@@ -118,7 +152,6 @@ class Login (ctK.CTk):
         self.main_frame.grid_forget()  # remove main frame
         self.login_frame.grid(row=0, column=0, sticky="ns")  # show login frame
   
-
 if __name__ == "__main__":
     app = Login()
     app.mainloop()

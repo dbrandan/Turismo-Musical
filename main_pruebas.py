@@ -1,4 +1,5 @@
 import json
+import os
 
 filename = "data.usuario.json"
 with open(filename,"r") as file:
